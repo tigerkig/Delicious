@@ -1,0 +1,184 @@
+// index/home page styling
+
+/* 
+main container 1170px small
+full-bleed 100%;      full
+1920px container      large
+
+*/
+
+
+/* Container for home page */
+.container {
+    display: grid;
+    grid-template-columns:
+      1fr
+      calc(min(1920px, 100%))
+      1fr;
+    .full {
+        width: 100%;
+        max-width:1920px;
+        margin:0 auto;
+        grid-column: 1 / 4;
+    }
+    .small {
+        max-width:1170px;
+        margin:0 auto;
+    }
+    section {
+        grid-column: 2;
+    }
+    .menuBG {
+        background:$menuBG;
+    }  
+
+    p {
+        @include lora(14px, 24px, 0.3px, $brownGrey, center);
+        margin-bottom:35px;
+    }
+    h2 {
+        @include raleWay(34px, 34px, 1.5px, $blackTwo);
+        position: relative;
+        margin-bottom:60px;
+    }
+    h2::after {
+        content: '';
+        position:absolute;
+        width:70px;
+        height:4px;
+        bottom:-25px;
+        left:50%;
+        transform:translate(-50%,-50%);
+        background-color: $green;
+    }
+}
+/* Home page styling */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-auto-rows: minmax(min-content, max-content);
+    // View recipes
+    .about {
+        display:flex;
+        width:75%;
+        flex-direction: column;
+        align-self:center;
+        justify-self: center;
+        text-align: center;  
+        h2 {
+            font-size:2.25em;
+        }
+        p {
+            font-size:1em;
+        }
+    }
+
+    // Food menu
+    .menu {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap:2em;
+        justify-self: center;
+        width:75%;
+        align-self:center;        
+        .item {
+            display:flex;
+            flex-direction: row; 
+            p {
+                @include lora(14px, 24px, 0.3px, $brownGrey, left);
+                font-size:1em;
+            }      
+            i {
+                color:$blackTwo;
+                margin-right:.85em;
+                font-size:2em;
+            }
+            h3 {
+                @include raleWay(18px, 18px, 0.5px, $blackTwo);
+                margin-bottom:15px;
+                font-size:1em;
+            }
+        }
+    }
+}
+
+// Gallery
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+// Quotes
+.quoteBG, section#quotes {
+    background-color: $quoteSection;
+}
+.quotes {
+    display:flex;
+    width:75%;
+    flex-direction: column;
+    align-items:center;
+    justify-items: center;
+    text-align: center;
+    margin:15em auto 10em auto; 
+    p {
+        @include lora(1.5em, 36px, 0.6px, $blackTwo, center);
+        font-style: italic;
+        position: relative;
+        
+    }
+    h2 {
+        font-size: 2.25em;
+    }
+    p.quoteNav {
+        margin-top:2.5em;
+        color:$white;
+        cursor: pointer;
+        i:first-child {
+            margin-right:1em;
+            color:$offWhite;
+        }
+    }
+    .fa-quote-right, .fa-quote-left {
+        position:absolute;
+        color:$white;
+        font-size:2em;
+    }
+    .fa-quote-left {
+        top:-15px;
+        left:-100px;
+    }
+    .fa-quote-right {
+        bottom:10px;
+        right:-100px;
+    }
+
+}
+
+// Our restaurants
+.restaurants {
+    display:flex;
+    width:75%;
+    flex-direction: column;
+    align-items:center;
+    justify-items: center;
+    text-align: center;
+    margin:15em auto 10em auto;    
+}
+
+.restaurants > div {
+    position: relative;
+    margin-bottom:60px;
+}
+.restaurants > div::after {
+    content: '';
+    position:absolute;
+    top:-38%;
+    left:75%;
+    width: 207px;
+    height: 206px;
+    background-image: url(../assets/home-circle-text.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}

@@ -1,0 +1,85 @@
+/*
+THIS PARTIAL STYLESHEET IS FOR FOOTER
+*/
+
+/* Blog post styling */
+footer {
+    background-color: $footer;
+    .content {
+        margin-top:100px;
+        margin-bottom:100px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: [row] auto [row];
+        gap:20px 160px;
+
+        /* Column header */
+        .colHeader {
+            grid-row: row;
+            h2 {
+                @include raleWay(34px, 34px, 1.1px, $green);
+            }
+            .header {
+                @include raleWay(18px, 18px, 0.5px, $white);
+            }
+        }
+        
+        /* Column content */
+        .col {
+            grid-row: row 2;
+            .row {
+                padding:10px 0; 
+                p {
+                    @include lora(14px, 24px, 0.3px, $lightGrey, left);
+                }
+            }
+            .row:not(:last-child) {
+                border-bottom:1px solid $footerBorder;
+            }
+            
+
+            .subscribeForm {
+                display:flex;
+                margin:20px 0;
+                #subscribeEmail {
+                    background-color: $footerInput;
+                    padding:15px;
+                    font-style: italic;
+                    @include lora(14px, 24px, 0.3px, $lightGrey, left);
+                    border:none;
+                    flex:2;
+                }
+    
+                #subscribeSubmit {
+                    background-color: $green;
+                    flex:1;
+                    color:$white;
+                    font-size:24px;
+                }
+            }
+
+            span.socialLinks i {
+                margin-right:1em;
+                color:$white;
+                font-size:18px;
+            }
+        }
+    }
+    .footer {
+        background-color: $footerLast;
+        padding:30px 0;
+        
+        .wrapper {
+            flex-direction: row;
+            .copyright {
+                @include raleWay(14px, 14px, 0.3px, $lightGrey, "normal");
+                span {
+                    color: $green;
+                    margin-left:5px;
+                }
+            }
+            
+            
+        }  
+    }
+}

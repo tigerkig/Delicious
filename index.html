@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FONT IMPORTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- STYLE SHEET IMPORTS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <title>Home</title>
+</head>
+<body>
+
+    <!-- popup box -->
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <span class="closePopup" id="closePopup">
+                <i class="far fa-times-circle"></i>
+            </span>
+            <span id="popupMessage"></span>
+        </div>   
+    </div>
+
+    <!-- Header of page -->
+	<header class="home">
+
+		<!-- Wrapper to contain content -->
+		<div class="wrapper headerPadding">
+            <div class="headerContent">
+                <!-- Navigation of site -->
+                <nav class="topBar">
+                    <div class="logo">
+                        <h1><a href="./index.html">DELICIOUS</a></h1>
+                    </div>
+                    <ul class="nav clearfix">
+                        <li class="desktop"><a class="active">HOME</a></li>
+                        <li class="desktop"><a href="">ABOUT</a></li>
+                        <li class="desktop"><a href="">RECIPES</a></li>
+                        <li class="desktop"><a href="">NUTRITION</a></li>
+                        <li class="desktop"><a href="./blog.html">BLOG</a></li>
+                        <li class="desktop"><a href="">SHOP</a></li>
+                        <li class="desktop"><a href="./contact.html">CONTACT</a></li>
+                        <li class="desktop"><a href=""><div class="cart"><span class="count">2</span></div><i class="fas fa-shopping-bag"></i></a></li>
+                        <li class="desktop"><a href=""><i class="fas fa-search"></i></a></li>
+
+                        <li class="mobile"><i class="fas fa-bars" id="mobileIcon"></i></li>
+
+                        <div id="mobileMenu"> 
+                            <ul class="">
+                                <span class="closeMobileMenu" id="closeMenu">
+                                    <i class="far fa-times-circle"></i>
+                                </span>
+                                <li><a href="./index.html">HOME</a></li>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">RECIPES</a></li>
+                                <li><a href="">NUTRITION</a></li>
+                                <li><a class="active">BLOG</a></li>
+                                <li><a href="">SHOP</a></li>
+                                <li><a href="./contact.html">CONTACT</a></li>
+                                <li><a href="">CART <div class="cartMobile"><span class="count">2</span></div></a></li>
+                                <li><a href="">SEARCH</a></li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </ul>
+                </nav>
+            </div>
+		</div>
+	</header>
+    
+    
+    <main class="container">
+      
+        <!-- recipes section within grid -->
+        <section class="full" id="#recipes">
+            <div class="grid">
+                <div class="about">
+                    <h2>
+                        MOST POPULAR RECIPES
+                    </h2>
+                    <p>
+                        Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya
+nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water
+chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek
+soko chicory celtuce parsley jícama salsify.
+                    </p>
+                    <a href="" class="green" id="viewRecipes">VIEW RECIPES</a>
+                </div>
+                <div><img src="./assets/home-2.jpeg"></div>
+            </div>
+        </section>
+
+        <!-- menu section within grid -->
+        
+        <div class="menuBG"></div>
+        <section id="#menu">
+            <div class="grid menuBG">
+                <div><img src="./assets/home-3.jpeg"></div> 
+                <div class="menu">
+                    <!-- row 1-->
+                    <div class="item">
+                        <div><i class="fas fa-lemon"></i></div>
+                        <div>
+                            <h3>VEGETARIAN</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div><i class="fas fa-utensils"></i></div>
+                        <div>
+                            <h3>APPETIZERS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- row 2 -->
+                    <div class="item">
+                        <div><i class="fas fa-coffee"></i></div>
+                        <div>
+                            <h3>DESERTS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div><i class="fas fa-glass-martini"></i></div>
+                        <div>
+                            <h3>DRINKS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- row 3 -->
+                    <div class="item">
+                        <div><i class="fas fa-leaf"></i></div>
+                        <div>
+                            <h3>SALADS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div><i class="fas fa-utensil-spoon"></i></div>
+                        <div>
+                            <h3>SIDE DISHES</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="menuBG"></div>
+        
+
+        <!-- our restaurants sections -->
+        <section id="#restaurants">
+            <div class="small">
+                <div class="restaurants">
+
+                    <div><img src="./assets/home-4.jpeg"></div>
+
+                    <h2>OUR RESTAURANTS</h2>
+
+                    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- full bleed gallery -->
+        <section class="full" id="#gallery">
+            
+            <div class="gallery">
+
+                <div><img src="./assets/home-5.jpeg"></div>
+
+                <div><img src="./assets/home-6.jpeg"></div>
+
+                <div><img src="./assets/home-7.jpeg"></div>
+
+                <div><img src="./assets/home-8.jpeg"></div>
+
+                <div><img src="./assets/home-9.jpeg"></div>
+
+                <div><img src="./assets/home-10.jpeg"></div>
+
+
+            
+            </div>
+
+        </section>
+
+        <!-- our restaurants sections -->
+        <div class="quoteBG"></div>
+        <section id="quotes">
+            <div class="small">
+                <div class="quotes">
+
+                    <h2>HUNGRY CLIENTS</h2>
+                    
+                    <p>
+                        <i class="fas fa-quote-left"></i>
+                        Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer
+    purslane. Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale
+    radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock
+    yarrow chickpea dandelion.
+                        <i class="fas fa-quote-right"></i>
+                    </p>
+                    
+                    <p class="quoteNav">
+                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-right"></i>
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <div class="quoteBG"></div>
+
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="content">
+
+                <!-- First row of columns-->
+                <div class="colHeader">
+                    <h2>
+                        DELICIOUS
+                    </h2>
+                </div>
+                <div class="colHeader">
+                    <div class="header">
+                        RECENT POSTS
+                    </div>
+                </div>
+                <div class="colHeader">
+                    <div class="header">
+                        SUBSCRIBE NOW
+                    </div>
+                </div>
+
+                <!-- Second row of columns-->
+                <div class="col">
+                    <div class="row">
+                        <p>
+                            Soko radicchio bunya nuts gram dulse
+    silver beet parsnip napa cabbage lotus
+    root sea lettuce brussels sprout cabbage.
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <p>A delicious restaurant</p>
+                        <p>Toronto, Ontario</p>
+                    </div>
+
+                    <div class="row">
+                        <p>yum@food.com</p>
+                    </div>
+
+                    <div class="row">
+                        <p>+1 234 567 8910</p>
+                    </div>
+
+                </div>
+                <div class="col">
+
+                    <div class="row">
+                        <p>Beetroot water spinach okra water</p>
+                    </div>
+                    
+                    <div class="row">
+                        <p>Chestnut ricebean pea catsear courgette</p>
+                    </div>
+
+                    <div class="row">
+                        <p>Summer purslane spinach arugula pea</p>
+                    </div>
+
+                    <div class="row">
+                        <p>Tatsoi aubergine spring onion bush</p>
+                    </div>
+
+                    <div class="row">
+                        <p>Tomato kale radicchio turnip chicory</p>
+                    </div>
+
+                    <div class="row">
+                        <p>Salsify pea sprouts fava bean</p>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    
+                    <div class="row" id="subscribeFormParent">
+                        <p>Get all of our newest recipes immediately in your inbox!</p>
+                        <!-- Form for email subscription -->
+                        <form action="" method="POST" id="subscribeForm">
+                            <div class="subscribeForm">
+                                <input type="text" name="subscribeEmail" placeholder="Enter your email" id="subscribeEmail">
+                                <button type="submit" name="submit" id="subscribeSubmit"><i class="fas fa-long-arrow-alt-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="row">
+                        <p>
+                            <span class="socialLinks">
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="wrapper">
+                <p class="copyright">Copyrights © 2015 by <span> POLAR </span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./scripts.js"></script>
+
+</body>
+</html>

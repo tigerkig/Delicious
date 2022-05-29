@@ -1,0 +1,114 @@
+/* CONTACT PAGE WRAPPER */
+.wrapperContact {
+    display: grid;
+    grid-template-columns:
+      1fr
+      calc(min(1170px, 100%))
+      1fr;
+  }
+  .wrapperContact > section {
+    grid-column: 2;
+    max-width:1170px;
+    margin: 0 auto;
+
+    display:grid;
+    grid-template-columns: 2.25fr 1fr;
+    gap:30px;
+    h2 {
+        @include raleWay(24px, 24px, 0.5px, $blackTwo);
+        margin-bottom:60px;
+    } 
+    h3 {
+        margin-top:75px;
+        @include raleWay(20px, 20px, 0.5px, $blackTwo);
+        margin-bottom:25px;
+    } 
+    .form {
+        padding:90px 0;
+
+        form.commentForm {
+            
+            display:grid;
+            grid-template-columns: [col] 1fr [col] 1fr;
+            grid-template-rows: [row] auto [row] auto [row] auto [row];
+            gap:30px;
+
+            
+
+            input[type="text"], textarea {
+                border:1px solid $contactGrey;
+                padding: 15px 15px;
+                background-color: $contactGrey;
+                @include lora(14px, 24px, 0.3px, $brownGrey, left);
+                font-weight: bold;
+                width:100%;
+            }
+
+            div:nth-child(1) {
+                grid-row: row;
+            }
+            div:nth-child(2) {
+                grid-column: col 2;
+                grid-row: row;
+            }
+            div:nth-child(3) {
+                grid-column: col / span 2;
+                grid-row: row 2;
+            }
+            div:nth-child(4) {
+                grid-column: col / span 2;
+                grid-row: row 3;
+                textarea {
+                    min-height:244px;
+                    resize: vertical;
+                }
+            }
+            
+            button {
+                grid-column: col;
+                grid-row: row 4;
+                
+                display:flex;
+                width:50%;
+                align-items:center;
+                padding:15px 0;
+                background-color: transparent;
+                @include raleWay(16px, 16px, 0.3px, $green);
+                i {
+                    margin-left:10px;
+                    font-size:20px;
+                }
+            }
+        }
+    }
+
+    .details {
+        background-color:$contactGrey;
+        padding:90px 25px;
+        grid-column: 2;
+
+        .spacing {
+            margin:25px 0;
+        }
+
+        .italic {
+            font-style: italic;
+            color:$lightGrey;
+        }
+
+        .days {
+            @include raleWay(13px, 13px, 0px, $blackTwo, "normal");
+        }
+        
+    }
+
+    
+
+  }
+  .full-bleed {
+    width: 100%;
+    grid-column: 1 / 4;
+  }
+  .right {
+      background-color: $contactGrey;
+  }

@@ -1,0 +1,181 @@
+/*
+THIS PARTIAL STYLESHEET IS FOR BLOG.HTML
+*/
+
+/* Blog post styling */
+section.blog {
+    margin-top:150px;
+    .title {
+        margin-bottom: 14px;
+        h2 {
+            @include raleWay(34px, 34px, 1.1px, $black);
+        }  
+    } 
+
+    .details {
+        margin-bottom: 38px;
+        p {
+            @include raleWay(13px, 13px, 0.3px, $black, "normal");
+        }
+    }
+    
+    .content {
+        p:not(:last-child) {
+            margin-bottom:30px;
+        }
+    }
+}
+
+/* Tags for blog post */
+section.tags {
+    display:flex;
+    flex-direction: column;
+    div {
+        span.title {
+            @include raleWay(16px, 36px, 0.5px, $blackTwo);
+        }
+        span.content {
+            @include lora(14px, 24px, 0.3px, $brownGrey, left);
+            i {
+                font-size:1.125rem;
+                margin:.5em;
+            }
+        }
+    }  
+}
+
+/* Author of blog post */
+section.author {
+    display:grid;
+    grid-template-columns: 169px 1fr;
+    grid-gap: 30px;
+    div { 
+        display:grid;
+        grid-template-columns: 1fr;       
+        div {
+            .name {
+                @include raleWay(16px, 16px, 0.5px, $blackTwo);
+                padding-bottom: 16px;
+            }
+        }
+    }
+    div:not(:first-child) {
+        background-color: $blogAuthor;
+        align-items: center;
+    }
+}
+
+section.relatedPosts, section.comments, section.leaveComment {
+    .header, span.author {
+        @include raleWay(16px, 16px, 0.5px, $blackTwo);
+    }
+}
+
+/* Related posts */
+section.relatedPosts {
+    .header {
+        margin-bottom:30px;
+    }
+    .posts {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        .post {
+            img {
+                margin-bottom:30px;
+            }
+            .title {
+                @include raleWay(18px, 18px, 0.5px, $blackTwo);
+                margin-bottom:16px; 
+            }
+            /* Changing font of "Admin" and "Recipes" links */
+            span.link {
+                @include raleWay(13px, 24px, 0.3px, $brownGrey);
+            }
+        }
+    }  
+}
+
+/* Comments section */
+section.comments {
+    .header {
+        margin-bottom:30px;
+    }
+    div.comments {
+        display:grid;
+        grid-template-columns: 70px 1fr;
+        grid-gap: 30px;
+        div.comment {
+            background-color: $blogComment;
+            padding:16px;
+            position: relative;
+            div.author {
+                @include lora(14px, 24px, 0.3px, $blackTwo, left);
+                margin-bottom:10px;
+            }
+            div.published {
+                margin-top:10px;
+                @include raleWay(11px, 24px, 0.3px, $blackTwo);
+            }
+        }
+        div.comment::before {
+            content: '';
+            position: absolute;
+            left: -10px; 
+            top: 13px;
+            border-top: 6px solid transparent;
+            border-right: 10px solid $blogComment;
+            border-bottom: 6px solid transparent;
+        }
+    }  
+}
+
+/* Leave a comment section */
+section.leaveComment {
+    margin-bottom:190px;
+    div.header {
+        margin-bottom:10px;
+    }
+    p {
+        font-style: italic;
+    }
+    form.commentForm {
+        margin-top:20px;
+        display:grid;
+        grid-template-columns: [col] 1fr [col] 1fr [col] 1fr;
+        grid-template-rows: [row] auto [row] auto [row];
+        gap:18px 30px;
+        input[type="text"], textarea {
+            border:1px solid $border;
+            padding: 20px 15px;
+            grid-row: row;
+            width:100%;
+        }
+        #name, #commentName {
+            grid-column: col;
+            grid-row: row;
+        }
+        #email, #commentEmail {
+            grid-column: col 2;
+            grid-row: row;
+        }
+        #website, #commentWebsite {
+            grid-column: col 3;
+            grid-row: row;
+        }
+        textarea, #comment {
+            grid-column: col / span 3;
+            grid-row: row 2;
+            min-height:180px;
+            resize: vertical;
+        }
+        button {
+            grid-column: col;
+            grid-row: row 3;
+            max-width:200px;
+            padding:25px 0;
+            background-color: $green;
+            @include raleWay(16px, 16px, 0.3px, $white);
+        }
+    }
+}

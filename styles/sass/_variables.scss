@@ -1,0 +1,57 @@
+/* Colour palette */
+$lightGrey: #999;
+$brownGrey: #666;
+$black: #000;
+$white: #fff;
+$blackTwo: #333;
+$green: #64a604;
+
+/* Header bg image height sizes */
+$headerBlog:604px; 
+$headerContact:604px; 
+$headerHome:976px;
+
+/* Footer colour palette */
+$footer: #2e2e2e;
+$footerLast: #252525;
+$footerBorder: #474747;
+$footerInput: #535353;
+
+/* Blog colour palette */
+$border:#e5e5e5;
+$blogAuthor:#f6f6f6;
+$blogComment: #efefef;
+
+/* Contact colour palette */
+$contactGrey: #f6f6f6;
+
+/* Home page colour palette */
+$quoteSection: #dded9a;
+$menuBG: #f2f2f2;
+$offWhite: #eef6d1;
+
+/* Text style catalog */
+@mixin raleWay($fontSize, $lineHeight, $letterSpacing, $color, $style:"") {
+    font-family: 'Raleway', sans-serif;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    @if $style == "" {
+        // font-weight:bold;
+        font-weight:bold; 
+    } 
+    @if $style == "normal" {
+        // font-weight:bold;
+        font-weight:normal; 
+    }
+    color: $color;
+}
+
+@mixin lora($fontSize, $lineHeight, $letterSpacing, $color, $justify) {
+    font-family: 'Lora', serif;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+    text-align: $justify;
+}
